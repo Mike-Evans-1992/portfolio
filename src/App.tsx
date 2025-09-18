@@ -2,6 +2,9 @@ import './App.css'
 import avatar from '/avatar.png'
 import vacationApp from '/vacationApp.png'
 import logo from '/logo.webp'
+import lettersToSantaMP4 from '/media/letters-to-santa.mp4'
+import lettersToSantaWEBM from '/media/letters-to-santa.webm'
+import lettersToSanta from '/media/letters-to-santa.jpg'
 
 function App() {
 
@@ -98,9 +101,9 @@ function App() {
                 loop
                 muted
                 playsInline
-                poster="/media/letters-to-santa.jpg">
-                <source src="/media/letters-to-santa.mp4" type="video/mp4" />
-                <source src="/media/letters-to-santa.webm" type="video/webm" />
+                poster={lettersToSanta}>
+                <source src={lettersToSantaMP4} type="video/mp4" />
+                <source src={lettersToSantaWEBM} type="video/webm" />
               </video>  
             </div>
             <p className="text-center text-xs">
