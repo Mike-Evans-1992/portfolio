@@ -1,6 +1,7 @@
 import './App.css'
-import avatar from './assets/avatar.png'
-import vacationApp from './assets/vacationApp.png'
+import avatar from '/avatar.png'
+import vacationApp from '/vacationApp.png'
+import logo from '/logo.webp'
 
 function App() {
 
@@ -33,8 +34,33 @@ function App() {
       {/* Projects Section */}
       <section className="flex flex-col w-screen h-screen items-center justify-start bg-gray-100" id="projects">
         <h1 className="text-4xl font-bold pt-8">My Projects:</h1>
+        {/* Grid to hold projects */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16">
-          
+          {/* SimplizityLife Project */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-4">SimplizityLife</h2>
+            <p className="text-gray-700 mb-4">Technologies: Angular, React, Firebase, Firestore, Firebase Auth, CDKDragDrop</p>
+            <p className="text-gray-700 mb-4">
+              A family-focused web application designed to organize daily routines and tasks. Core features include:
+              <ul className="list-disc list-inside">
+                <li>Event Calendar: Color-coded events by family member.</li>
+                <li>Chores & Rewards: Assign chores, track points, and redeem custom rewards.</li>
+                <li>Annual Chores: Automatically added to chore screen by month.</li>
+                <li>Meal Planner & Shopping List: Add shopping items directly from recipe cards.</li>
+                <li>Drag & Drop: Intuitive management for chores, rewards, and meals.</li>
+              </ul>
+            </p>
+            <a 
+              href="https://simplizitylife.com" 
+              target="_blank" rel="noopener noreferrer" 
+              className=
+                "pt-6 items-center justify-center flex flex-col md:relative md:top-[80px]"
+            >
+              <img src={logo} alt="SimplizityLife Logo" className="mb-4 rounded w-[250px] h-[100px]" />
+            </a>
+            <p className="pt-6 text-center text-xs md:relative md:top-[232px]">Click image to visit site</p>
+          </div>
+
           {/* Android Vacation Tracking Project */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Android Vacation Tracker</h2>
@@ -47,10 +73,39 @@ function App() {
                 <li>Share vacation plans through SMS w/ formatted text</li>
               </ul>
             </p>
-            <a href="/app-release.apk" download className="text-blue-500 hover:underline items-center justify-center flex flex-col">
-              <img src={vacationApp} alt="Android Vacation Tracker" className="mb-4 rounded w-[100px] h-[200px]" />
+            <a href="/app-release.apk" download className="md:relative md:top-[50px] items-center justify-center flex flex-col">
+              <img src={vacationApp} alt="Android Vacation Tracker" className="mb-4 rounded w-[150px] h-[300px]" />
             </a>
-            <p className="text-center text-xs">Click image to download APK</p>
+            <p className="md:relative md:top-[132px] text-center text-xs">Click image to download APK</p>
+          </div>
+
+          {/* Letters to Santa Project */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-4">Android Vacation Tracker</h2>
+            <p className="text-gray-700 mb-4">Technologies: Android, Kotlin, Jetpack Compose, Google OAuth, Google Drive Integration</p>
+            <p className="text-gray-700">
+              A mobile application that allows children to send letters to Santa digitally. Core features include:
+              <ul className="list-disc list-inside">
+                <li>Write a Letter: Upload an image of a handwritten letter or type out a letter.</li>
+                <li>Your Letters: Read the letters that you wrote to Santa. Parents have easy access to child's wish list.</li>
+                <li>Directions: Give Santa delivery instructions for houses with or without a Chimney.</li>
+              </ul>
+            </p>
+            <div className="items-center justify-center flex flex-col">  {/*TODO: change to a tag to download apk when apk is ready*/}
+              <video
+                className="mb-4 rounded w-[200px] h-[400px]"
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/media/letters-to-santa.jpg">
+                <source src="/media/letters-to-santa.mp4" type="video/mp4" />
+                <source src="/media/letters-to-santa.webm" type="video/webm" />
+              </video>  
+            </div>
+            <p className="text-center text-xs">
+              <span className="text-xl">🚧</span> App in Development: APK coming soon. <span className="text-xl">🚧</span></p>
+            
           </div>
 
         </div>  
