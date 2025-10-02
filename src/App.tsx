@@ -12,7 +12,7 @@ function App() {
     <>
     <main>
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row w-screen h-screen items-center md:items-start justify-center md:justify-between md:p-8">
+      <section className="flex flex-col md:flex-row w-full min-h-screen overflow-hidden items-center md:items-start justify-center md:justify-between md:p-8">
         <div className="order-2 md:order-1 flex flex-col justify-center md:justify-between md:min-h-screen items-center">
 
           <div className="md:pl-[100px] md:pt-[100px]">
@@ -26,11 +26,11 @@ function App() {
               View Projects
             </a>
           </div>
-
         </div>
 
-        <div className="order-1 md:order-2 pb-[100px]">
-          <img src={avatar} alt="Avatar" className="rounded-full md:mb-4" />
+        <div className="order-1 md:order-2 pb-[100px] flex-shrink-0 h-[95%] flex items-center justify-center">
+          <img src={avatar} alt="Avatar" 
+          className="block rounded-full object-cover h-full w-auto max-h-[95vh]" />
         </div>
       </section>
 
