@@ -2,9 +2,6 @@ import './App.css'
 import avatar from '/avatar.png'
 import vacationApp from '/vacationApp.png'
 import logo from '/logo.webp'
-import lettersToSantaMP4 from '/media/letters-to-santa.mp4'
-import lettersToSantaWEBM from '/media/letters-to-santa.webm'
-import lettersToSanta from '/media/letters-to-santa.jpg'
 
 function App() {
 
@@ -38,7 +35,7 @@ function App() {
       <section className="flex flex-col w-screen h-screen items-center justify-start bg-gray-100" id="projects">
         <h1 className="text-4xl font-bold pt-8">My Projects:</h1>
         {/* Grid to hold projects */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16 md:h-[80%] overflow-y-auto pb-8">
           {/* SimplizityLife Project */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">SimplizityLife</h2>
@@ -80,35 +77,6 @@ function App() {
               <img src={vacationApp} alt="Android Vacation Tracker" className="mb-4 rounded w-[150px] h-[300px]" />
             </a>
             <p className="md:relative md:top-[132px] text-center text-xs">Click image to download APK</p>
-          </div>
-
-          {/* Letters to Santa Project */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Android Vacation Tracker</h2>
-            <p className="text-gray-700 mb-4">Technologies: Android, Kotlin, Jetpack Compose, Google OAuth, Google Drive Integration</p>
-            <p className="text-gray-700">
-              A mobile application that allows children to send letters to Santa digitally. Core features include:
-              <ul className="list-disc list-inside">
-                <li>Write a Letter: Upload an image of a handwritten letter or type out a letter.</li>
-                <li>Your Letters: Read the letters that you wrote to Santa. Parents have easy access to child's wish list.</li>
-                <li>Directions: Give Santa delivery instructions for houses with or without a Chimney.</li>
-              </ul>
-            </p>
-            <div className="items-center justify-center flex flex-col">  {/*TODO: change to a tag to download apk when apk is ready*/}
-              <video
-                className="mb-4 rounded w-[200px] h-[400px]"
-                autoPlay
-                loop
-                muted
-                playsInline
-                poster={lettersToSanta}>
-                <source src={lettersToSantaMP4} type="video/mp4" />
-                <source src={lettersToSantaWEBM} type="video/webm" />
-              </video>  
-            </div>
-            <p className="text-center text-xs">
-              <span className="text-xl">🚧</span> App in Development: APK coming soon. <span className="text-xl">🚧</span></p>
-            
           </div>
 
         </div>  
