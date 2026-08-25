@@ -51,7 +51,7 @@ function App() {
               </ul>
             </p>
             <a 
-              href="https://simplizitylife.com" 
+              href="https://simplizityorganizer.web.app" 
               target="_blank" rel="noopener noreferrer" 
               className=
                 "pt-6 items-center justify-center flex flex-col md:relative md:top-[80px]"
